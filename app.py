@@ -72,4 +72,8 @@ def add_expense():
 
 
 if __name__ == "__main__":
+<<<<<<< HEAD
     app.run(host="0.0.0.0", port=8080)
+=======
+    app.run(host="0.0.0.0", port=8080)
+>>>>>>> f31dd94180b28e2123e01d9d6344c58473cc20b8
