@@ -30,6 +30,10 @@ def extract_amount(message: str) -> float | None:
     match = AMOUNT_REGEX.search(message)
     return float(match.group(1)) if match else None
 
+@app.route("/")
+def health():
+    return "OK", 200
+
 
 @app.route("/add_expense", methods=["POST"])
 def add_expense():
