@@ -9,4 +9,5 @@ COPY . .
 
 ENV PORT=8080
 
-CMD ["gunicorn", "-b", "0.0.0.0:8080", "app:app"]
+# Railway injects $PORT; fall back to 8080 for local/Cloud Run
+CMD ["sh", "-c", "gunicorn -b 0.0.0.0:${PORT:-8080} app:app"]
